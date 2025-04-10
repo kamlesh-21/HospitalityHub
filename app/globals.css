@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #001F3F;
+  --accent: #FFB400;
+  --background: #FAFAFA;
+  --text: #333333;
+  --muted: #888888;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background-color: var(--background);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Playfair Display', serif;
+  color: var(--primary);
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent text-primary px-6 py-3 rounded-md font-semibold hover:bg-[#FFC300] transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-primary text-white px-6 py-3 rounded-md font-semibold hover:bg-opacity-90 transition-colors;
+  }
+  
+  .container-custom {
+    @apply max-w-6xl mx-auto px-6;
+  }
+  
+  .scale-on-hover {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+}
